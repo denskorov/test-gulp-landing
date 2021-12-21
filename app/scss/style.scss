@@ -1,4 +1,5 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "fonts";
 
 $font-size: 24px;
 $dark-green: #0B4141;
@@ -9,23 +10,30 @@ $light-gray: #E5E5E5;
 html, body {
     font-size: $font-size;
     color: $dark-green;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 h1 {
     font-size: 5rem;
+    font-family: 'Motter Corpus', sans-serif;
+    line-height: 5.3333rem;
 }
 
 h2 {
     font-size: 3.3333rem;
+    font-family: 'Motter Corpus', sans-serif;
+    line-height: 4rem;
 }
 
 h3 {
     font-size: 2.8333rem;
     font-weight: 900;
+    line-height: 3rem;
 }
 
 a {
     color: $dark-green;
+    font-size: 0.75rem;
     
     &:hover {
         color: $dark-green;
@@ -35,6 +43,10 @@ a {
 
 img {
     max-width: 100%;
+}
+
+p {
+    line-height: 1.3333rem;
 }
 
 b {
@@ -76,7 +88,53 @@ b {
     }
 }
 
+.font-family-motter {
+    font-family: 'Motter Corpus', sans-serif;
+}
+
+.btn {
+    border-radius: 124px;
+    padding: 12px 45px;
+    
+    &.btn-border {
+        border: 2px solid currentColor;
+    }
+    
+    &.btn-border-bottom-no {
+        border-bottom-color: transparent;
+    }
+}
+
 //*****************
+
+header {
+    .navbar {
+        &-brand {
+            font-size: 26px;
+            line-height: 31px;
+        }
+        
+        &-nav {
+            li.nav-item {
+                a {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                
+                &.active a {
+                    border-bottom: 2px solid currentColor;
+                }
+            }
+        }
+    }
+    
+    .form-download {
+        button {
+            margin-left: 36px;
+        }
+    }
+}
 
 .section_1 {
     padding: 120px 0 290px;
@@ -106,21 +164,16 @@ b {
 }
 
 .section_3 {
-    padding: 0;
-    
-    img {
-        //min-height: 800px;
-        //width: auto;
-    }
+    padding: 120px 0 85px;
 }
 
 .section_4 {
-
+    padding: 120px 0 60px;
 }
 
 .section_5 {
     background: rgba(245, 245, 245, 0.6);
-    padding: 117px 0 430px;
+    padding: 120px 0 430px;
     background: url("./../images/sec_5_horses.png") center bottom no-repeat;
     background-size: 100%;
 }
@@ -130,23 +183,36 @@ b {
     background: linear-gradient(180deg, #FFCCBC 0%, rgba(255, 204, 188, 0) 100%),
     url("./../images/sec_6_bg.png") center;
     
-    .item {
-        width: calc((100% - 48px) / 3);
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 8px;
-        backdrop-filter: blur(12px);
-        margin-bottom: 24px;
+    .comments {
+        font-size: 13px;
         
-        &-author {
-            .item-author-image img {
-                margin-right: 12px;
-                border-radius: 50%;
-                min-width: 48px;
-            }
+        p {
+            line-height: 18px;
+        }
+        
+        .item {
+            width: calc((100% - 48px) / 3);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 1rem;
             
-            p {
-                margin: 0;
+            &-author {
+                .item-author-image img {
+                    margin-right: .5rem;
+                    border-radius: 50%;
+                    min-width: 48px;
+                }
+                
+                b {
+                    font-size: 16px;
+                }
+                
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -171,11 +237,33 @@ footer.section {
         text-align: left;
     }
     
-    .footer-download {
-        margin-bottom: 110px;
-    }
-    
     p {
         margin: 0;
+    }
+    
+    .footer {
+        &-download {
+            margin-top: 50px;
+            margin-bottom: 110px;
+            
+            a {
+                padding: 1rem 2rem;
+                margin: 0 25px;
+            }
+        }
+        
+        &-bottom {
+            h4 {
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 8px;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 600;
+            }
+        }
     }
 }

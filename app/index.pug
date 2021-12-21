@@ -2,14 +2,17 @@ doctype html
 html(lang='en')
     head
         meta(charset='UTF-8')
-        //TODO: viewport
+        meta(name="viewport" content="width=device-width, initial-scale=1")
         title Test landing
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet")
         link(rel='stylesheet' href='./css/style.css')
     body
         header
             .container
                 nav.navbar.navbar-expand-lg
-                    a.navbar-brand(href='#') Cornelia
+                    a.navbar-brand.font-family-motter(href='#') Cornelia
                     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     #navbarNav.collapse.navbar-collapse
@@ -21,8 +24,8 @@ html(lang='en')
                             li.nav-item
                                 a.nav-link(href='#') Why
 
-                    form.form-inline
-                        button.btn(type='submit') Download
+                    form.form-inline.form-download
+                        button.bg-dark-green.text-accent.btn(type='submit') Download
         section.section.section_1
             .container.text-center
                 h1.text-accent
@@ -42,7 +45,7 @@ html(lang='en')
                     .col-6
                         h3 Choose your destiny
                         p Each unicorn has its own personality and symbolism. Get to know your new mascot and surround yourself with a strong ally. Thus choose the brave one and you will be able to face any situation. Take the sweet Cornelia and protect your health. If you need more luck, meet the Magic Cornelia! If you’re born to be bold, choose the Impetuous Cornelia : nothing will defeat you.
-                        a.btn.btn-transparent(href='#') Learn more about her story
+                        a.btn.btn-border.text-accent(href='#') Learn more about her story
                     .col-6
                         img(src='./images/sec_3_horse.png')
         section.section.section_4.block-even-odd
@@ -53,9 +56,9 @@ html(lang='en')
                     .col-6
                         h3 Always<br>Go futher
                         p Decline Cornelia as you wish! Black, dark grey, white, light grey, prussian blue ... Choose your colour, size and characteristics! And if that's not enough, personalise it to make it unique, in your own image. So open up the field of possibilities,  the world is yours !
-                        a(href='#')
-                            img(src='./images/icons/icon_scroll_mouse.svg')
-                            | SCROLL TO KNOW MORE
+                        a.d-flex.align-items-center(href='#')
+                            img.mr-2(src='./images/icons/icon_scroll_mouse.svg')
+                            span.text-uppercase SCROLL TO KNOW MORE
                 .row
                     .col-6
                         img(src='./images/sec_4_img_2.png')
@@ -70,7 +73,7 @@ html(lang='en')
         section.section.section_6
             .container
                 h3.text-white They talk about it better than us
-                .d-flex.flex-wrap.justify-content-between
+                .d-flex.flex-wrap.justify-content-between.comments
                     .item
                         p You've saved our business! Since I invested in Cornelia I made over 100,000 dollars profits. Thank you so much for your help
                         .item-author.d-flex.align-items-center
@@ -134,7 +137,7 @@ html(lang='en')
                     .col-6
                         h3 Each lesser<br>detail matter
                         p Cornelia is an all-in-one tool that helps teams design every part of the product experience. Download and get to a functional prototype faster than ever.
-                        a.btn(href='#') Discover Cornelia
+                        a.btn.btn-border(href='#') Discover Cornelia
                 .row
                     .col-6
                         img(src='./images/sec_7_img_2.png')
@@ -143,17 +146,17 @@ html(lang='en')
                             img(src='./images/icons/icon-logo-app-store.png')
                         h3 Unicorns exist
                         p Download our appliaction on the AppStore or the 3D model of Cornelia and meet your new mascot ! Take some cool pictures of her and share it on Instagram, Twitter and Facebook with #CorneliaTheUnicorn !
-                        a.btn(href='#') Meet Cornelia in VR
+                        a.btn.btn-border(href='#') Meet Cornelia in VR
         footer.section.bg-dark-green.text-accent
             .container
                 h2.text-center Get started with<br>Cornelia today
                 div.d-flex.justify-content-center.footer-download
-                    a.btn(href='#')
-                        img(src='./images/icons/figma_logo.svg')
+                    a.btn.btn-border.btn-border-bottom-no(href='#')
+                        img.mr-2(src='./images/icons/figma_logo.svg')
                         span Download for<br>Figma
-                    a.btn(href='#')
-                        img(src='./images/icons/sketch_logo.svg')
+                    a.btn.btn-border.btn-border-bottom-no(href='#')
+                        img.mr-2(src='./images/icons/sketch_logo.svg')
                         span Download for<br>Sketch
-                div
-                    h4 Cornelia
+                .footer-bottom
+                    h4.font-family-motter Cornelia
                     p Design & Development
