@@ -1,1 +1,181 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+
+$font-size: 24px;
+$dark-green: #0B4141;
+$darker-green: #0B1F1F;
+$accent-color: #FFCCBC;
+$light-gray: #E5E5E5;
+
+html, body {
+    font-size: $font-size;
+    color: $dark-green;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.3333rem;
+}
+
+h3 {
+    font-size: 2.8333rem;
+    font-weight: 900;
+}
+
+a {
+    color: $dark-green;
+    
+    &:hover {
+        color: $dark-green;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+b {
+    font-weight: 800;
+}
+
+
+//**************
+.section {
+    padding: 100px 0;
+}
+
+.text-accent {
+    color: $accent-color;
+}
+
+.bg-accent {
+    background-color: $accent-color;
+}
+
+.bg-dark-green {
+    background-color: $dark-green;
+}
+
+.block-even-odd {
+    .row {
+        align-items: center;
+        
+        &:nth-child(even) {
+            [class*='col']:first-child {
+                order: 2;
+                text-align: right;
+            }
+            
+            [class*='col']:last-child {
+                order: 1;
+            }
+        }
+    }
+}
+
+//*****************
+
+.section_1 {
+    padding: 120px 0 290px;
+    position: relative;
+    
+    img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0;
+    }
+    
+    h1 span:last-child {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(to bottom, $dark-green 50%, $darker-green 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.section_2 {
+    padding: 195px 0;
+    background-image: url("../images/sec_2_bg.png");
+    background-position: center;
+}
+
+.section_3 {
+    padding: 0;
+    
+    img {
+        //min-height: 800px;
+        //width: auto;
+    }
+}
+
+.section_4 {
+
+}
+
+.section_5 {
+    background: rgba(245, 245, 245, 0.6);
+    padding: 117px 0 430px;
+    background: url("./../images/sec_5_horses.png") center bottom no-repeat;
+    background-size: 100%;
+}
+
+.section_6 {
+    padding: 65px 0 170px;
+    background: linear-gradient(180deg, #FFCCBC 0%, rgba(255, 204, 188, 0) 100%),
+    url("./../images/sec_6_bg.png") center;
+    
+    .item {
+        width: calc((100% - 48px) / 3);
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        backdrop-filter: blur(12px);
+        margin-bottom: 24px;
+        
+        &-author {
+            .item-author-image img {
+                margin-right: 12px;
+                border-radius: 50%;
+                min-width: 48px;
+            }
+            
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.section_7 {
+    padding-bottom: 0;
+    background: url("./../images/sec_7_bg_confettis.png") top left no-repeat,
+    url("./../images/sec_7_bg_light.png") bottom right no-repeat;
+    
+    .row:first-child {
+        margin-bottom: 245px;
+    }
+}
+
+footer.section {
+    padding: 236px 0 100px;
+    
+    a {
+        display: flex;
+        color: $accent-color;
+        text-align: left;
+    }
+    
+    .footer-download {
+        margin-bottom: 110px;
+    }
+    
+    p {
+        margin: 0;
+    }
+}
