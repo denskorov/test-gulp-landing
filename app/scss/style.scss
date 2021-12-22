@@ -23,12 +23,15 @@ h2 {
     font-size: 3.3333rem;
     font-family: 'Motter Corpus', sans-serif;
     line-height: 4rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
     font-size: 2.8333rem;
     font-weight: 900;
     line-height: 3rem;
+    margin-top: 1.3333rem;
+    margin-bottom: 1.3333rem;
 }
 
 a {
@@ -47,12 +50,12 @@ img {
 
 p {
     line-height: 1.3333rem;
+    margin-bottom: 2rem;
 }
 
 b {
     font-weight: 800;
 }
-
 
 //**************
 .section {
@@ -74,6 +77,10 @@ b {
 .block-even-odd {
     .row {
         align-items: center;
+        
+        &:not(:last-child) {
+            margin-bottom: 120px;
+        }
         
         &:nth-child(even) {
             [class*='col']:first-child {
@@ -168,13 +175,12 @@ header {
 }
 
 .section_4 {
-    padding: 120px 0 60px;
+    padding: 120px 0 96px;
 }
 
 .section_5 {
-    background: rgba(245, 245, 245, 0.6);
     padding: 120px 0 430px;
-    background: url("./../images/sec_5_horses.png") center bottom no-repeat;
+    background: rgba(245, 245, 245, 0.6) url("./../images/sec_5_horses.png") center bottom no-repeat;
     background-size: 100%;
 }
 
@@ -182,6 +188,10 @@ header {
     padding: 65px 0 170px;
     background: linear-gradient(180deg, #FFCCBC 0%, rgba(255, 204, 188, 0) 100%),
     url("./../images/sec_6_bg.png") center;
+    
+    h3 {
+        margin-bottom: 2.6666rem;
+    }
     
     .comments {
         font-size: 13px;
@@ -224,7 +234,7 @@ header {
     url("./../images/sec_7_bg_light.png") bottom right no-repeat;
     
     .row:first-child {
-        margin-bottom: 245px;
+        margin-bottom: 96px;
     }
 }
 
