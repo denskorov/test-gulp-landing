@@ -107,8 +107,31 @@ b {
         border: 2px solid currentColor;
     }
     
-    &.btn-border-bottom-no {
+    &.btn-border-bottom-transparent {
         border-bottom-color: transparent;
+    }
+    
+    &:hover {
+        color: $accent-color;
+        background-color: $dark-green;
+        
+        &.bg-dark-green, &.text-accent, &.btn-border-bottom-transparent {
+            background-color: $accent-color;
+            color: $dark-green;
+        }
+        
+        &.btn-border-bottom-transparent {
+            border-bottom-color: currentColor;
+        }
+    }
+    
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(255, 204, 188, 0.5);
+        
+        &.bg-dark-green {
+            box-shadow: 0 0 0 0.2rem rgba(11, 65, 65, 0.5);
+        }
     }
 }
 
@@ -176,6 +199,14 @@ header {
 
 .section_4 {
     padding: 120px 0 96px;
+    
+    .btn-link {
+        width: auto;
+        color: currentColor;
+        
+        &:focus {
+        }
+    }
 }
 
 .section_5 {
