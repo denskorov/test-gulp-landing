@@ -139,6 +139,63 @@ b {
 
 header {
     .navbar {
+        &-toggler {
+            border: $accent-color solid 2px;
+            //$_this: &;
+            //&.collapsed {
+            &-icon {
+                position: relative;
+                
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    width: 32px;
+                    height: 2px;
+                    background-color: $accent-color;
+                    top: 10px;
+                    transition: .5s;
+                }
+                
+                &::before {
+                    transform-origin: left center;
+                    transform: rotate(45deg);
+                    left: 0;
+                }
+                
+                &::after {
+                    transform-origin: right center;
+                    transform: rotate(-45deg);
+                    right: 0;
+                }
+            }
+            
+            &:not(.collapsed) {
+                .navbar-toggler-icon {
+                    &::before {
+                        left: 11px
+                    }
+                    
+                    &::after {
+                        right: 11px;
+                    }
+                }
+            }
+            
+            //}
+            
+            //:not(.collapsed) {
+            //    &-icon {
+            //        &::before {
+            //            left: 20px;
+            //        }
+            //
+            //        &::after {
+            //            right: 20px;
+            //        }
+            //    }
+            //}
+        }
+        
         &-brand {
             font-size: 26px;
             line-height: 31px;
@@ -146,10 +203,16 @@ header {
         
         &-nav {
             li.nav-item {
-                a {
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+                
+                a.nav-link {
                     font-weight: 600;
                     font-size: 16px;
                     line-height: 22px;
+                    display: inline-block;
+                    padding: 0.75rem 1.5rem;
                 }
                 
                 &.active a {
@@ -163,6 +226,13 @@ header {
         button {
             margin-left: 36px;
         }
+        
+        @include media-breakpoint-down(md) {
+            button {
+                margin: 0;
+            }
+        }
+        
     }
 }
 

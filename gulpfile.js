@@ -35,7 +35,7 @@ function buildStyles() {
         .pipe(sass({
             //TODO: параметри для зжимання стилів
             // outputStyle: 'nested'
-            outputStyle: 'compressed'
+            // outputStyle: 'compressed'
         }).on('error', sass.logError))
         //TODO: запис карти
         .pipe(sourcemaps.write())
