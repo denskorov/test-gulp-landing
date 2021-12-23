@@ -121,4 +121,6 @@ function watchCode() {
     watch(appPath.js, buildJs)
 }
 
+exports.build = series(makeFavicon, buildStyles, buildHtml, buildJs, copyFonts, copyImages)
+
 exports.default = series(makeFavicon, buildStyles, buildHtml, buildJs, copyFonts, copyImages, parallel(startLocalServer, watchCode))
