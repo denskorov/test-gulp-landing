@@ -17,11 +17,11 @@ const appPath = {
 }
 
 const destPath = {
-    css: './dest/css',
-    html: './dest',
-    img: './dest/images',
-    fonts: './dest/fonts',
-    js: './dest/js'
+    css: './css',
+    html: './',
+    img: './images',
+    fonts: './fonts',
+    js: './js'
 }
 
 const jsPath = [
