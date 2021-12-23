@@ -149,6 +149,13 @@ b {
 //*****************
 
 header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    
     .navbar {
         &-toggler {
             border: $accent-color solid 2px;
@@ -247,6 +254,7 @@ header {
 }
 
 .section_1 {
+    margin-top: 108px;
     padding: 120px 0 290px;
     position: relative;
     
@@ -305,7 +313,6 @@ header {
     }
     
     .comments {
-        align-content: flex-start;
         font-size: 13px;
         
         p {
@@ -314,7 +321,6 @@ header {
         }
         
         .item {
-            align-self: flex-start;
             width: calc((100% - 48px) / 3);
             padding: 20px;
             background: rgba(255, 255, 255, 0.8);

@@ -10,12 +10,14 @@
   "description": "",
   "dependencies": {
     "bootstrap": "4.6",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
+    "gulp-favicons": "^3.0.0",
     "gulp-minify": "^3.1.0",
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.0.0",

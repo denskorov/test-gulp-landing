@@ -8,21 +8,21 @@ html(lang='en')
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet")
         link(rel='stylesheet' href='./css/style.css')
-    body
+    body#top
         header
             .container
                 nav.navbar.navbar-expand-lg
-                    a.navbar-brand.font-family-motter(href='#') Cornelia
+                    a.navbar-brand.font-family-motter(href='#top') Cornelia
                     button.navbar-toggler.collapsed(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     #navbarNav.collapse.navbar-collapse
                         ul.navbar-nav.ml-auto.text-right
-                            li.nav-item.active
-                                a.nav-link(href='#') Learn
                             li.nav-item
-                                a.nav-link(href='#') About
+                                a.nav-link(href='#sec_3') Learn
                             li.nav-item
-                                a.nav-link(href='#') Why
+                                a.nav-link(href='#sec_5') About
+                            li.nav-item
+                                a.nav-link(href='#footer') Why
                         form.form-inline.form-download.d-flex.justify-content-center
                             button.bg-dark-green.text-accent.btn(type='submit') Download
         section.section.section_1
@@ -38,7 +38,7 @@ html(lang='en')
                     | May Cornelia accompany you in your daily life and in the most perilous missions you may encounter.
 
                 p With her, give yourself the means to succeed, <b>believe in yourself and in your dreams!</b>
-        section.section.section_3.text-accent.bg-dark-green
+        section.section.section_3.text-accent.bg-dark-green#sec_3
             .container
                 .row.align-items-center
                     .col-md-6
@@ -65,7 +65,7 @@ html(lang='en')
                     .col-md-6
                         h3 Premium<br>3D Quality
                         p Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn which usually stores their magically powers while a pegasus can only fly with its gorgeous wings. Now the difference between a unicorn and a pegasus is quite clear a unicorn has a horn.
-        section.section.section_5.text-center
+        section.section.section_5.text-center#sec_5
             .container
                 h2 Let the magic happen
                 p Surround yourself with the most faithful companions and embark together on fantastic new adventures! Pocket, medium or XXL format, find the Cornelia that best suits your environment.
@@ -73,7 +73,7 @@ html(lang='en')
         section.section.section_6
             .container
                 h3.text-center.text-white They talk about it better than us
-                .d-flex.flex-wrap.justify-content-between.comments
+                .comments
                     .item
                         p You've saved our business! Since I invested in Cornelia I made over 100,000 dollars profits. Thank you so much for your help
                         .item-author.d-flex.align-items-center
@@ -155,7 +155,7 @@ html(lang='en')
                         p Download our appliaction on the AppStore or the 3D model of Cornelia and meet your new mascot ! Take some cool pictures of her and share it on Instagram, Twitter and Facebook with #CorneliaTheUnicorn !
                         p
                             a.btn.btn-border(href='#') Meet Cornelia in VR
-        footer.section.bg-dark-green.text-accent
+        footer.section.bg-dark-green.text-accent#footer
             .container
                 h2.text-center Get started with<br> Cornelia today
                 div.d-flex.justify-content-center.footer-download
