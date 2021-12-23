@@ -5,6 +5,9 @@
   "scripts": {
     "start": "gulp build"
   },
+  "engines": {
+    "npm": "6.x"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
