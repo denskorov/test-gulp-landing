@@ -1,14 +1,25 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "fonts";
 
-$font-size: 24px;
+$font-size: (
+    xl: 24px,
+    md: 18px,
+    sm: 14px
+);
 $dark-green: #0B4141;
 $darker-green: #0B1F1F;
 $accent-color: #FFCCBC;
 $light-gray: #E5E5E5;
 
+
+$comments_grid_column: (
+    lg: 3,
+    md: 2,
+    sm: 1
+);
+
 html, body {
-    font-size: $font-size;
+    font-size: map-get($font-size, 'xl');
     color: $dark-green;
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -141,18 +152,17 @@ header {
     .navbar {
         &-toggler {
             border: $accent-color solid 2px;
-            //$_this: &;
-            //&.collapsed {
+            
             &-icon {
                 position: relative;
                 
                 &::before, &::after {
                     content: '';
                     position: absolute;
-                    width: 32px;
+                    width: 1.35rem;
                     height: 2px;
                     background-color: $accent-color;
-                    top: 10px;
+                    top: .5rem;
                     transition: .5s;
                 }
                 
@@ -172,11 +182,11 @@ header {
             &:not(.collapsed) {
                 .navbar-toggler-icon {
                     &::before {
-                        left: 11px
+                        left: .45rem
                     }
                     
                     &::after {
-                        right: 11px;
+                        right: .45rem;
                     }
                 }
             }
@@ -377,6 +387,105 @@ footer.section {
                 font-size: 16px;
                 line-height: 22px;
                 font-weight: 600;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    
+    br {
+        display: none;
+    }
+    
+    html, body {
+        font-size: map-get($font-size, 'xl');
+    }
+    
+    .section {
+        padding: 50px 0;
+        
+        &_1 {
+            
+            padding: 80px 0 250px;
+        }
+        
+        &_2 {
+            padding: 140px 0;
+        }
+        
+        &_3 {
+            padding: 80px 0 35px;
+        }
+        
+        &_4 {
+            padding: 80px 0 40px;
+        }
+        
+        &_5 {
+            padding: 80px 0 300px;
+            background-size: auto 250px;
+        }
+        
+        &_6 {
+            padding-bottom: 60px;
+            
+            .comments .item {
+                width: calc((100% - map-get($font-size, 'md') * (map-get($comments_grid_column, 'md') - 1)) / map-get($comments_grid_column, 'md'));
+                //    calc( (100% - fontSize * (col - 1)) / col )
+            }
+        }
+        
+        &_7 {
+            .row:first-child {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    footer.section {
+        padding: 110px 0 50px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    html, body {
+        font-size: map-get($font-size, 'sm');
+    }
+    
+    .section {
+        &_2 {
+            padding: 40px 0;
+        }
+        
+        &_3 {
+            padding: 40px 0 15px;
+        }
+        
+        &_4 {
+            padding: 40px 0 20px;
+        }
+        
+        &_6 {
+            .comments .item {
+                width: calc((100% - map-get($font-size, 'md') * (map-get($comments_grid_column, 'sm') - 1)) / map-get($comments_grid_column, 'sm'));
+            }
+        }
+    }
+    
+    .block-even-odd {
+        .row {
+            &:not(:last-child) {
+                margin-bottom: 60px;
+            }
+            
+            &:nth-child(odd) {
+                [class*='col']:first-child {
+                    order: 2;
+                }
+                
+                [class*='col']:last-child {
+                    order: 1;
+                }
             }
         }
     }
